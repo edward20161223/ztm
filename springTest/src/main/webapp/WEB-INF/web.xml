@@ -4,27 +4,23 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
 	<display-name>demo</display-name>
-	<display-name>Archetype Created Web Application</display-name>
-
 
 	<welcome-file-list>
 		<welcome-file>test.jsp</welcome-file>
 	</welcome-file-list>
 
-
+    <!-- 配置路径方式有两种，一种是将文件放到WEB-INF目录下 parm-value的值为/WEB-INF/文件名.xml,另外一种是用classpath:文件名.xml 文件放到/src/main/resources/下 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<!-- 配置路径方式有两种，一种是将文件放到WEB-INF目录下 parm-value的值为/WEB-INF/文件名.xml,另外一种是用classpath:文件名.xml 
-			文件放到/src/main/resources/下 -->
 		<param-value>classpath:springTestRootServlet.xml</param-value>
 	</context-param>
-
-
      
 	<context-param>
 		<param-name>log4jExposeWebAppRoot</param-name>
 		<param-value>false</param-value>
 	</context-param>
+	
+	
 	
 	
 	<!-- character -->
@@ -40,11 +36,12 @@
 			<param-value>true</param-value>
 		</init-param>
 	</filter>
-
 	<filter-mapping>
 		<filter-name>characterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	
 
 	<!-- spring mvc -->
 	<servlet>
@@ -56,17 +53,16 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>gameLiveServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+
      
 	<listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
 	</listener>
-	
 	
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

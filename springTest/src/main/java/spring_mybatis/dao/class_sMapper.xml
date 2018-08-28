@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTDMapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="spring_mybatis.dao.class_sDAO">
+    <insert id="saveBanji" parameterType="Banji">
+        insert into class_s(class_name,create_time) values(#{class_name},#{create_time})
+    </insert>  
+    <select id="getBanji" resultType="Banji" parameterType="int">
+        select * from class_s where id =#{id}
+    </select>  
+</mapper>

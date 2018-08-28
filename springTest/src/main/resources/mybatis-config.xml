@@ -4,5 +4,6 @@
 <configuration>
     <typeAliases>
        <typeAlias type="spring_mybatis.entry.student" alias="Student"/>
+       <typeAlias type="spring_mybatis.entry.class_s" alias="Banji"/>
     </typeAliases>
 </configuration>

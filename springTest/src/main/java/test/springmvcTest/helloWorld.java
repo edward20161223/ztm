@@ -1,4 +1,4 @@
-package test;
+package test.springmvcTest;
 
 import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;

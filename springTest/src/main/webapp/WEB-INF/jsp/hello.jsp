@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-    hello world!
-    test git!
-            访问springMVC的界面！
-    
+  hello!   
 </body>
 </html>

@@ -8,13 +8,25 @@ public class class_s {
 	public String toString() {
 		return "class_s [class_name=" + class_name + ", create_time=" + create_time + "]";
 	}
+	
+	public class_s() {
+	}
 
+	public class_s(int class_id,String class_name, Date create_time) {
+		super();
+		this.class_id=class_id;
+		this.class_name = class_name;
+		this.create_time = create_time;
+	}
 	
 	public class_s(String class_name, Date create_time) {
 		super();
 		this.class_name = class_name;
 		this.create_time = create_time;
 	}
+	
+
+	
 	
 	
 	public String getClass_name() {
@@ -31,6 +43,20 @@ public class class_s {
 	}
 	
 	
+	
+	public int getClass_id() {
+		return class_id;
+	}
+
+
+	public void setClass_id(int class_id) {
+		this.class_id = class_id;
+	}
+
+
+
+
+	int class_id;
 	String class_name;
 	Date create_time;
 	

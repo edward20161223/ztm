@@ -17,7 +17,7 @@
     
     <description>demo</description>
     
-    <context:component-scan base-package="test.springAnnotation,test.springMVC,test.springmvcTest"></context:component-scan>
+    <context:component-scan base-package="test.springAnnotation,test.springMVC,test.springmvcTest,test.springmvc_mybaits"></context:component-scan>
     <mvc:annotation-driven/><!-- 开启注解 -->
     
     <!-- 可以添加注册bean，或者在组件扫描中添加类所在的包名 20190219-->

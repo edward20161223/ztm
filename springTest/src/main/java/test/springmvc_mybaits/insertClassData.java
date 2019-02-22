@@ -1,6 +1,5 @@
 package test.springmvc_mybaits;
 
-import java.text.DateFormat;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +23,6 @@ public class insertClassData {
 		System.out.println("class_name is:"+class_name +" create_time is:"+create_time);
 		try {
 	 	       Date creationDate=new Date();
-	 	       //DateFormat df2 = DateFormat.getDateTimeInstance();//可以精确到时分秒
-	 	       //System.out.println(df2.format(creationDate));
 	 	       class_s banji3 = new class_s(class_name,creationDate);
 	 	       banjiSevice.saveBanji(banji3);
 	 	  	   

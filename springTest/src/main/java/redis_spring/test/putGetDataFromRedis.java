@@ -17,5 +17,6 @@ public class putGetDataFromRedis {
 		vString=(String) RedisCacheManager.get("kTest");
 		System.out.println("vString is:"+vString);
 		return "insertClassDataFail";
+		//return null;
 	}
 }

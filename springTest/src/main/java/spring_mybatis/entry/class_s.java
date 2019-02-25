@@ -1,9 +1,12 @@
 package spring_mybatis.entry;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class class_s {
+public class class_s  implements Serializable{
 
+	private static final long serialVersionUID = -8366929034564774130L;
+	
 	@Override
 	public String toString() {
 		return "class_s [class_name=" + class_name + ", create_time=" + create_time + "]";

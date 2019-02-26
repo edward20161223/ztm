@@ -1,7 +1,5 @@
 package spring_mybatis.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import redis_spring.test.RedisCacheManagerMy;
 import spring_mybatis.entry.class_s;

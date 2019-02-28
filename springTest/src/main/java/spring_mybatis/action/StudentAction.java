@@ -27,7 +27,7 @@ public class StudentAction {
        ApplicationContext context =new ClassPathXmlApplicationContext("springTestRootServlet.xml");
        StudentAction studentAction =(StudentAction)context.getBean("studentAction");
       
-       student student = new student("п║уе",10,"005",2);
+       student student = new student("KK",10,"005",2);
        studentAction.studentService.save(student);
        
        student std = studentAction.studentService.getStudent(1);

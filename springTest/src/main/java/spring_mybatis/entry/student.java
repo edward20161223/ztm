@@ -6,6 +6,10 @@ public class student {
 		
 	}
 	
+	@Override
+	public String toString(){
+		return "student [name=" + name + ", age=" + age + ", school_number=" + school_number + ", class_s=" + class_s + "]";
+	}
 	
 	public student(String name, int age, String school_number, int class_s) {	
 		this.name = name;

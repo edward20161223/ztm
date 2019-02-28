@@ -17,9 +17,9 @@
     
     <description>demo</description>
     
-    <context:component-scan base-package="test.springAnnotation,test.springMVC,test.springmvcTest,test.springmvc_mybaits,redis_spring.test,test.spring_mybatisTransaction,spring_mybatis.service">
+    <context:component-scan base-package="test.springAnnotation,test.springMVC,test.springmvcTest,test.springmvc_mybaits,redis_spring.test,test.spring_mybatisTransaction">
         <!-- 扫描业务组件,让spring不扫描带有@Service注解的类,防止事务失效 -->    
-        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" />
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
     </context:component-scan>
     
     <mvc:annotation-driven/><!-- 开启注解 -->

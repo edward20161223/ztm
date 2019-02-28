@@ -2,6 +2,12 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTDConfig 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
  
 <configuration>
+
+    <!-- 用于输出日志 log4j:LOG4J SLF4J -->
+    <settings>  
+        <setting name="logImpl" value="SLF4J"/>  
+    </settings> 
+    
     <typeAliases>
        <typeAlias type="spring_mybatis.entry.student" alias="Student"/>
        <typeAlias type="spring_mybatis.entry.class_s" alias="Banji"/>

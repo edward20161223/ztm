@@ -24,7 +24,9 @@ public class class_sAction {
     @Autowired
     private StudentService studentService;
 	
-	
+	//使用spring注解事务无效，解决问题方法：修改SpringMVC配置文件，在配置文件中扫描包中，添加过滤掉@service表示的类
+    //不修改之前，只能通过代码解析上下文，事务注解才能生效，如下面的写法
+    
     @Transactional(propagation=Propagation.REQUIRED)
 	public void testTransaction(){
     	try {

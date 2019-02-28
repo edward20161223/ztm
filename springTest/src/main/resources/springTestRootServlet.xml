@@ -24,7 +24,12 @@
     
     
     <!-- 自动扫描 -->
-    <context:component-scan base-package="spring_mybatis.service,spring_mybatis.dao,spring_mybatis.action,redis_spring.test,test.spring_mybatisTransaction"/>
+    <context:component-scan base-package="spring_mybatis.service,spring_mybatis.dao,spring_mybatis.action,redis_spring.test,test.spring_mybatisTransaction,test.springmvc_mybaits"/>
+    
+    
+    
+    <!-- 该 BeanPostProcessor 将自动对标注 @Autowired 的 Bean 进行注入 --> 
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/> 
     
     
     
@@ -115,12 +120,14 @@
     
     
     
+    
     <!-- 添加spring申明式事务支持 -->
-    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
           <property name="dataSource" ref="dataSource" />
     </bean>
     
-    <tx:annotation-driven transaction-manager="txManager"/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    
     
     
     

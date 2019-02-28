@@ -1,10 +1,8 @@
 package spring_mybatis.service;
 
-import java.awt.event.KeyAdapter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import spring_mybatis.dao.class_sDAO;
 import spring_mybatis.entry.class_s;

@@ -24,5 +24,10 @@
     <!-- 查询缓存redis，如果缓存中有则，直接返回缓存中的对象，如果缓存中没有，则查找数据库中的数据对象，并将对象保存在缓存中  20190225 -->
     <a href="/springTest/getClassById?id=10">测试redis缓存数据功能，结合数据库查询</a><br/>
     
+    <!-- 测试spring+mybatis中的事务管理  20190227 -->
+    <a href="/springTest/insertClassStudent.jsp">测试spring-redis中的事务</a><br/>
+    
+    
 </body>
 </html>
+

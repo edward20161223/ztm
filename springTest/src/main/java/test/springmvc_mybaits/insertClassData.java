@@ -17,6 +17,8 @@ public class insertClassData {
 	
 	@Autowired
 	private class_sService banjiSevice;
+	//private spring_mybatis.service.class_sServiceJ banjiSevice;
+	
 	
 	@RequestMapping(value="/insertBanji")
 	public String  insertdata(String class_name,String create_time,Model model){

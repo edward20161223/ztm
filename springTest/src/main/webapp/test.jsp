@@ -22,7 +22,11 @@
     <a href="/springTest/redisTest">redis测试，添加获取数据</a><br/>
     
     <!-- 查询缓存redis，如果缓存中有则，直接返回缓存中的对象，如果缓存中没有，则查找数据库中的数据对象，并将对象保存在缓存中  20190225 -->
+    <!-- 用于测试写死了，传入的id值为10， -->
     <a href="/springTest/getClassById?id=10">测试redis缓存数据功能，结合数据库查询</a><br/>
+    
+    <!-- redis测试，删除id值对应的redis中缓存的数据 -->
+    <a href="/springTest/deleteclass?id=10">根据id值，删除redis缓存中的一条数据数据</a><br/>
     
     <!-- 测试spring+mybatis中的事务管理  20190227 -->
     <a href="/springTest/insertClassStudent.jsp">测试spring-redis中的事务</a><br/>

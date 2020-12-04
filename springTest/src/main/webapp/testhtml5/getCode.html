@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getcode</title>
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+   <button onclick='getcode()'>后的code值</button>
+</body>
+<script type="text/javascript">
+  function getRequest(){
+	var request=new XMLHttpRequest();
+	return request;
+  }
+
+  function getcode(){
+	  var getRequest=this.getRequest();
+	  if(getRequest.code){
+		  this.code=getRequest.code;
+	  }else{
+		  //window.location.href="http://oa.southsurvey.com:8090";
+		  //var pagurl=window.location.href
+		  var p="http://oa.southsurvey.com:8090";
+		  var pagurl=p
+		  .replace(/[/]/g, "%2f")
+		  .replace(/[:]/g, "%3a")
+		  .replace(/[#]/g, "%23")
+		  .replace(/[&]/g, "%26")
+		  .replace(/[=]/g, "%3d");
+		  
+		  var url="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+
+				  "wx929778b408b6434b"+
+				  "&redirect_uri="+
+				  pagurl+
+				  "&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect";
+		  window.location.href=url;
+	  }
+	  console.log("code:"+getRequest.code);
+	  alter("code:"+getRequest.code);
+  }
+</script>
+</html>

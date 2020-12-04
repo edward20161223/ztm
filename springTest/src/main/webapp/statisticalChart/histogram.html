@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>绘制柱状统计图</title>
+<script src="/springTest/js/jquery-3.3.1.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="/springTest/js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<script src="/springTest/js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+
+
+<script>
+//获得任职人员信息20190319
+function getNewStaff(){
+	$.ajax({
+		type:'post',
+		async:'true',
+		url:'statisticsRecruits',
+		cache:'false',
+		success:function(data){
+			alter(data);
+		}
+	});
+}
+</script>
+
+
+
+<!--     
+<style>
+    .container{
+        width:1200px;
+        margin: 0 auto;
+        height:1200px;
+        background-color: red;
+    }
+    /*媒体查询：注意and后面空格的添加*/
+    /*iphone: w < 768px*/
+    @media screen and (max-width: 768px){
+        .container{
+            width:100%;
+            background-color: green;
+        }
+    }
+    /*pad: w >= 768  && w< 992*/
+    @media screen and (max-width: 992px) and (min-width: 768px) {
+        .container{
+            width:750px;
+            background-color: blue;
+        }
+    }
+    /*中等屏幕   w >= 992  && w<1200*/
+    @media screen and (max-width: 1200px) and (min-width: 992px) {
+        .container{
+            width:970px;
+            background-color: pink;
+        }
+    }
+</style>
+--> 
+
+
+
+<body>
+
+    <div><h1>人员入职统计</h1></div>
+    
+    <div style="border:1px blue solid; height:320px;" class="container-fluid">
+        <div style="border:1px red solid; height:320px;" class="container">
+           <img src="/springTest/images/1.jpg" class="img-responsive center-block">
+        </div>
+    </div>
+
+  
+</body>
+</html>
+
+

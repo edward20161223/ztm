@@ -32,6 +32,18 @@
     <a href="/springTest/insertClassStudent.jsp">测试spring-redis中的事务</a><br/>
     
     
+    <!-- 测试html5，表格  20190318 -->
+    <!-- http://localhost:8080/springTest/testhtml5/testHtml5.html -->
+    <a href="/springTest/testhtml5/testHtml5.html">测试html5表格</a><br/>
+    
+    
+    <!-- 测试html5，baidu地图  20190318 -->
+    <!-- http://localhost:8080/springTest/testhtml5/testHtml5.html -->
+    <a href="/springTest/testhtml5/testBaiduMap.html">测试html5，baidu地图</a><br/>
+    
+    <!-- 测试获得企业微信的code值  20190412 -->
+    <a href="/springTest/testhtml5/getCode.html">获得企业微信code值</a><br/>
+    
 </body>
 </html>
 

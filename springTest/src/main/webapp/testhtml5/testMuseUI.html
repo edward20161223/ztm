@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<!-- vue需要编译成浏览器可以识别的元素，编写代码不直接在web项目中，应该编译好的目录，引入到web项目中调用界面20190325 -->
+<!-- 这里验证失败 -->
+<head>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
+<script src="https://unpkg.com/muse-ui/dist/muse-ui.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+<link rel="stylesheet" href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css">
+
+<title>Insert title here</title>
+</head>
+
+
+<style>
+.demo-content-block {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+
+<body>
+  
+<div class="demo-content-block"  @click="message='click here....'"  v-click-outside="clickoutside">{{message}}</div>
+<!-- 
+<div id="app"></div>
+-->
+</body>
+
+
+
+<script>
+//export default {	
+	
+ new Vue({
+  data () {
+    return {
+      message: 'click! click! click!'
+    };
+  },
+  methods: {
+    clickoutside () {
+      this.message = 'click outside'
+    }
+  }
+}
+)
+
+ /*
+ import Vue from 'vue';
+ import MuseUI from 'muse-ui';
+ import 'muse-ui/dist/muse-ui.css';
+
+ Vue.use(MuseUI);
+
+ new Vue({
+   el: '#app',
+   render (h) {
+     return h('mu-button', {}, 'Hello World');
+   }
+ });
+ */
+</script>
+
+
+</html>

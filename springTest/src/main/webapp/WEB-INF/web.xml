@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	xsi:schemaLocation="http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
+    <!-- http://www.w3.org/2001/XMLSchema-instance http://www.springmodules.org/schema/cache/springmodules-cache.xsd -->
+	
+	
 	<display-name>demo</display-name>
 
 	<welcome-file-list>
@@ -72,5 +75,32 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	
+	
+	<!-- 访问静态资源配置信息，具体就是访问html文件20190313 -->
+	<servlet-mapping>   
+        <servlet-name>default</servlet-name>   
+        <url-pattern>*.html</url-pattern> 
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.jpeg</url-pattern>  
+    </servlet-mapping>
+    
+    
+    <!-- 激活Tomcat的defaultServlet来处理静态文件 写在dispathCher前面-->
+    <!--  
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.jsp</url-pattern>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.jpeg</url-pattern>     
+    </servlet-mapping>
+    -->
 
 </web-app>
